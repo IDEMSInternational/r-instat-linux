@@ -1,2 +1,2 @@
 # r-instat
-r-instat linux setup scriprs
+r-instat linux setup scripts
