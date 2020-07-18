@@ -40,16 +40,16 @@ env WINEPREFIX=$HOME/winedotnet WINEARCH=win32 WINEDLLOVERRIDES="mscoree,mshtml=
 sudo apt-get install -y cabextract  # for corefonts install
 env WINEPREFIX=$HOME/winedotnet WINEARCH=win32 winetricks -q dotnet40 corefonts
 
-# Install of .NET Framework 4.6.2 manually
+# Install of .NET Framework 4.6.1 manually
 env WINEPREFIX=$HOME/winedotnet WINEARCH=win32 winetricks win7
 wget 'https://download.microsoft.com/download/E/4/1/E4173890-A24A-4936-9FC9-AF930FE3FA40/NDP461-KB3102436-x86-x64-AllOS-ENU.exe'
 env WINEPREFIX=$HOME/winedotnet WINEARCH=win32 wine ./NDP461-KB3102436-x86-x64-AllOS-ENU.exe /q
 
-# Verify .NET Framework setup
-wget 'https://msdnshared.blob.core.windows.net/media/2018/05/netfx_setupverifier_new.zip'
-unzip netfx_setupverifier_new.zip
-env WINEPREFIX=$HOME/winedotnet WINEARCH=win32 wine ./netfx_setupverifier.exe
-env WINEPREFIX=$HOME/winedotnet WINEARCH=win32 wineboot –e
+# Verify .NET Framework setup (manual step using a GUI)
+#wget 'https://msdnshared.blob.core.windows.net/media/2018/05/netfx_setupverifier_new.zip'
+#unzip netfx_setupverifier_new.zip
+#env WINEPREFIX=$HOME/winedotnet WINEARCH=win32 wine ./netfx_setupverifier.exe
+env WINEPREFIX=$HOME/winedotnet WINEARCH=win32 wineboot -e
 
 # Direct link to R-instat Installer 0.6.2 32-bit (not working from Google Drive, see issue GitHub/#1)
 # ** CURRENTLY REQUIRES DOWNLOADING FROM A BROWSER TO ACKNOWLEDGE THAT GOOGLE HASN'T PERFORMED A VIRUS CHECK **
