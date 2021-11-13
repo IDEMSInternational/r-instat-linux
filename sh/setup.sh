@@ -51,10 +51,10 @@ env WINEPREFIX=$HOME/winedotnet WINEARCH=win32 wine ./NDP461-KB3102436-x86-x64-A
 #env WINEPREFIX=$HOME/winedotnet WINEARCH=win32 wine ./netfx_setupverifier.exe
 env WINEPREFIX=$HOME/winedotnet WINEARCH=win32 wineboot -e
 
-# Direct link to R-instat Installer 0.6.4 32-bit (not working from Google Drive, see issue GitHub/#1)
+# Direct link to R-instat Installer 0.7.3 32-bit (not working from Google Drive, see issue GitHub/#1)
 # ** CURRENTLY REQUIRES DOWNLOADING FROM A BROWSER TO ACKNOWLEDGE THAT GOOGLE HASN'T PERFORMED A VIRUS CHECK **
-wget https://drive.google.com/uc?export=download&id=1kqifLWe5Skv0y_L7cSp6n4H411ZbXViq
+wget https://drive.google.com/file/d/1iOISyTYnWFldfxA0mGHYODAtDk1XYA0t/view?usp=sharing
 
 # Install R-Instat
 env WINEPREFIX=$HOME/winedotnet WINEARCH=win32 wineboot –init
-env WINEPREFIX=$HOME/winedotnet WINEARCH=win32 wine ./R-Instat_0.6.4_Installer_32.exe
+env WINEPREFIX=$HOME/winedotnet WINEARCH=win32 wine ./R-Instat_0.7.3_Installer_32.exe
